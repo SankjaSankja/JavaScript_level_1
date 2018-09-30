@@ -1,0 +1,11 @@
+<script>
+
+    console.log("null < 0 ", null < 0); // false - алгоритм сравнения приводит null к числу (см. 9-ю строку), 0 не меньше 0
+    console.log("null > 0 ", null > 0); // false - то же самое. 0 не больше 0
+    console.log("null >= 0 ", null >= 0); // true - 0 больше или равен 0, это правда, т.к. 0 равен 0 
+    console.log("null <= 0 ", null <= 0); // true - то же самое
+    console.log("null == 0 ", null == 0); // false - разные типы данных не могут быть равны 
+    console.log("null != 0 ", null != 0); //true - не равны, и это правда
+    console.log("+null ", +null); // результат преобразования в число 
+
+</script>
