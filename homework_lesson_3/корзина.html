@@ -4,9 +4,7 @@
     function countBasketPrice(basket) {
         var totalPrice = 0;
         for (var i = 0; i < basket.length; i++) {
-            1) reduce: totalPrice += basket[i].price; => single aggregated value
-            2) map: basket[i].price = 0; => array of mutated elements
-            3) filter: if (basket[i] > 1000) {return basket[i]} => subset array
+            totalPrice += basket[i].price;
         }
         return totalPrice;
     }
