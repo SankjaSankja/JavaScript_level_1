@@ -1,0 +1,88 @@
+<script>
+    var questionText = [];
+    var answerFirst = [];
+    var answerSecond = [];
+    var answerThird = [];
+    var answerFourth = [];
+    var correctAnswer = [];
+    var moneyWon = [];
+    var toBreak = false;
+    var moneyCheckpoint = "0$"
+ 
+    questionText[0] = "Что кормит волка?"
+    answerFirst[0] = "a) Лес"
+    answerSecond[0] = "б) Ноги"
+    answerThird[0] = "в) Природа"
+    answerFourth[0] = "г) Лапы"
+    correctAnswer[0] = "б"
+    moneyWon[0] = "100$"
+    questionText[1] = "Густь свинье не кто?"
+    answerFirst[1] = "а) Не брат"
+    answerSecond[1] = "б) Не товарищ"
+    answerThird[1] = "в) Не начальник"
+    answerFourth[1] = "г) Не помощник"
+    correctAnswer[1] = "б"
+    moneyWon[1] = "200$"
+    questionText[2] = "Где всегда хорошо?"
+    answerFirst[2] = "а) На курорте"
+    answerSecond[2] = "б) Где нас нет"
+    answerThird[2] = "в) Дома"
+    answerFourth[2] = "г) В баре"
+    correctAnswer[2] = "б"
+    moneyWon[2] = "300$"
+    questionText[3] = "Бог дал, а кто взял?"
+    answerFirst[3] = "а) Сосед"
+    answerSecond[3] = "б) Налоговая"
+    answerThird[3] = "в) Бог"
+    answerFourth[3] = "г) Злоумышленник"
+    correctAnswer[3] = "в"
+    moneyWon[3] = "500$"
+    questionText[4] = "Что впервые всегда комом?"
+    answerFirst[4] = "а) Торт"
+    answerSecond[4] = "б) Код"
+    answerThird[4] = "в) Блин"
+    answerFourth[4] = "г) Снег"
+    correctAnswer[4] = "в"
+    moneyWon[4] = "1000$"
+    questionText[5] = "Что в своем глазу не видят?"
+    answerFirst[5] = "а) Соринку"
+    answerSecond[5] = "б) Ресничку"
+    answerThird[5] = "в) Бревно"
+    answerFourth[5] = "г) Слезу"
+    correctAnswer[5] = "в"
+    moneyWon[5] = "2000$"
+    
+ 
+    function userQuestion(i) {
+        userAnswer = prompt("Вопрос: " + questionText[i] + "\n" + "Ответы: " + "\n" + answerFirst[i] + "\n" + answerSecond[i] + "\n" + answerThird[i] + "\n" + answerFourth[i])
+        if (i == 1 || i == 5) {
+ 
+        }
+        if (userAnswer.toLowerCase() == correctAnswer[i]) {
+            if (i == 4) {
+                alert("Поздравляем с победой! Вы выиграли 2000$!")
+            } else {
+                var toContinue = confirm("Правильный ответ! Будете продолжать игру?")
+                if (!toContinue) {
+                    alert("В таком случае, вы выиграли " + moneyWon[i])
+                    toBreak = true;
+                    return 0;
+                
+                }
+            }
+        } else {
+            alert('Ответ неправильный! Вы выигрываете ' + moneyCheckpoint + "\n" + "Правильный ответ: " + correctAnswer[i]);
+            toBreak = true
+        }
+    }
+        for (var i = 0; i < 5; i++) {
+            userQuestion(i)
+            if (i == 1 || i == 5) { 
+                moneyCheckpoint = moneyWon[i]
+            }
+            if (toBreak) {
+                break;
+            }
+        }
+
+</script>
