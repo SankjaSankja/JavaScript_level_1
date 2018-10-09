@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = 1, b = 1, c, d;
+        c = ++a; alert(c); // 2 - a увеличивается на 1, то есть до 2, префиксная форма возвращает значение после увеличения
+        d = b++; alert(d); // 1 - b увеличивается на 1, то есть до 2, но из-за постфиксной формы возвращается значение до увеличения
+        c = (2+ ++a); alert(c); // 5 - а увеличивается до 3, потом сложение
+        d = (2+ b++); alert(d); // 4 - b увеличивается до 3, но постфиксная форма возвращает предыдущее значение 2, потом сложение
+        alert(a); // 3 - последнее значение а
+        alert(b); // 3 - последнее значение b
+    
+    </script>
+
+
+
+</body>
+</html>

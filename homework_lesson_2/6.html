@@ -1,0 +1,51 @@
+<script>
+    
+    var a = +prompt('Введите первое число');
+    var b = +prompt('Введите второе число');
+    var operation = prompt('Введите символ математической операции: плюс, минус, знак умножения или деления');
+    var rez;
+
+    function sum(a, b) {
+        return a + b;
+    }
+    
+    function sub(a, b) {
+        return a - b;
+    }
+    
+    function mul(a, b) {
+        return a * b;
+    }
+
+    function div(a, b) {
+        return a / b;
+    }
+    
+    function mathOperation(a, b, operation) {
+        switch (operation) {
+            case '+':
+                return sum (a, b);
+                break;
+
+            case '-':
+                return sub (a, b);
+                break;
+
+            case '*':
+                return mul (a, b);
+                break;
+
+            case '/':
+                return div (a, b);
+                break;
+                
+            default:
+                break;
+        }
+    }
+    rez = mathOperation(a, b, operation);
+    alert('Результат: ' + rez);
+    
+    
+    
+    </script>
