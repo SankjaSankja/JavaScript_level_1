@@ -1,0 +1,22 @@
+<script>
+    var n = 1;
+    var divider;
+    var reminder = false;
+    var result = [];
+    while (++n <= 100) {
+        divider = 1;
+        while (++divider < n) {
+            reminder = n % divider == 0;
+            if (reminder) {
+                break;
+            }
+        }
+        if (!reminder) {
+            result.push(n);
+        }
+    }
+    document.write(result.join('<br/>'));
+   
+
+
+</script>

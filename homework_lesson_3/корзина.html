@@ -1,0 +1,15 @@
+<script>
+    var basket = [{name:'beer', price:250}, {name:'wine', price:680}, {name:'whiskey', price:6400}];
+
+    function countBasketPrice(basket) {
+        var totalPrice = 0;
+        for (var i = 0; i < basket.length; i++) {
+            totalPrice += basket[i].price;
+        }
+        return totalPrice;
+    }
+
+    alert(countBasketPrice(basket));
+
+   
+</script>
